@@ -55,9 +55,10 @@ pipeline {
                 sh '''
 
                 mvn clean verify sonar:sonar \
-                    -Dsonar.projectKey=online/onsite-Haneen-B2D2 \
-                    -Dsonar.host.url=http://$SONAR_IP \
-                    -Dsonar.login=$SONAR_TOKEN
+                    -Dsonar.projectKey=online-onsite-Haneen-B2D2 \
+                    -Dsonar.host.url=http://52.23.193.18 \
+                    -Dsonar.login=sqp_251af270eefd134992b84c45cd437b667328f7f7
+              
 
                 '''
             }

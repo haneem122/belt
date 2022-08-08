@@ -3,14 +3,14 @@ pipeline {
 
     environment {
 
-        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+        AWS_ACCESS_KEY_ID     = credentials('Haneen-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('Haneen-aws-secret-access-key')
 
-        AWS_S3_BUCKET = "haneen-jenkins" 
+        AWS_S3_BUCKET = "haneen-belt2d2-artifacts-123456" 
         ARTIFACT_NAME = "hello-world.war" 
-        AWS_EB_APP_NAME = "jenkenis" 
+        AWS_EB_APP_NAME = "haneen-belt2-day2" 
         AWS_EB_APP_VERSION = "${BUILD_ID}" 
-        AWS_EB_ENVIRONMENT = "Jenkenis-env" 
+        AWS_EB_ENVIRONMENT = "Haneenbelt2day2-env" 
 
         SONAR_IP = "54.226.50.200"
         SONAR_TOKEN = "sqp_d6072e3b6091f13dc4afe718345b28aa7854cf8f"

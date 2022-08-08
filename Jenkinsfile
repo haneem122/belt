@@ -13,7 +13,7 @@ pipeline {
         AWS_EB_ENVIRONMENT = "Haneenbelt2day2-env" 
 
         SONAR_IP = "52.23.193.18"
-        SONAR_TOKEN = "sqp_d780c4fbce371fd81d22660309692d27bb28c75f"
+        SONAR_TOKEN = "sqp_251af270eefd134992b84c45cd437b667328f7f7"
 
     }
 
@@ -55,7 +55,7 @@ pipeline {
                 sh '''
 
                 mvn clean verify sonar:sonar \
-                    -Dsonar.projectKey=onlin-cohort-haneen \
+                    -Dsonar.projectKey=online/onsite-Haneen-B2D2 \
                     -Dsonar.host.url=http://$SONAR_IP \
                     -Dsonar.login=$SONAR_TOKEN
 

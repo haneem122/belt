@@ -8,7 +8,7 @@ pipeline {
 
         AWS_S3_BUCKET = "haneen-belt2d2-artifacts-123456" 
         ARTIFACT_NAME = "hello-world.war" 
-        AWS_EB_APP_NAME = "haneen-belt2-day2" 
+        AWS_EB_APP_NAME = "Haneen-belt2-day2" 
         AWS_EB_APP_VERSION = "${BUILD_ID}" 
         AWS_EB_ENVIRONMENT = "Haneenbelt2day2-env" 
 

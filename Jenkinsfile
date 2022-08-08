@@ -7,7 +7,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('Haneen-aws-secret-access-key')
 
         AWS_S3_BUCKET = "haneen-belt2d2-artifacts-123456" 
-        ARTIFACT_NAME = "hello-world.war" 
+        ARTIFACT_NAME = "hello-world.jar" 
         AWS_EB_APP_NAME = "haneen-belt2-day2" 
         AWS_EB_APP_VERSION = "${BUILD_ID}" 
         AWS_EB_ENVIRONMENT = "Haneenbelt2day2-env" 
@@ -56,8 +56,8 @@ pipeline {
 
                 mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=online/onsite-Haneen-B2D2 \
-                    -Dsonar.host.url=http://52.23.193.18 \
-                    -Dsonar.login=sqp_251af270eefd134992b84c45cd437b667328f7f7
+                    -Dsonar.host.url=http://$SONAR_IP \
+                    -Dsonar.login=$SONAR_TOKEN
 
                 '''
             }
